@@ -1,0 +1,11 @@
+<h2>To-Do List</h1>
+
+<% @lists.each do |l|%>
+	<h3><%= l.list%></h3>
+	<h3><%= l.completed%> </h3>
+	<%= link_to 'Edit List', edit_todo_path(l)%>
+	<%= link_to 'Delete List', todo_path(l), method: :delete %>
+<% end %>
+
+<p><%= link_to 'Create List', new_todo_path%></p>
+

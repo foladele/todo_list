@@ -1,0 +1,9 @@
+<h1>Create your lists</h1>
+
+<%= form_for @list do |l| %>
+	<p><%=l.label :completed%>
+	<%= l.check_box :completed %>
+	<%=l.label :list%>
+	<%=l.text_field :list%></p>
+	<p><%= l.submit %></p>
+<%end%>
